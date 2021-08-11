@@ -7,5 +7,7 @@ interface MainNavigation {
     fun openMenuList()
     fun openMenuListContainerMenu()
     fun openMenu()
+    fun openGreeting()
+    fun openAuthorizationFragmentNotShowItAnymore()
 
 }

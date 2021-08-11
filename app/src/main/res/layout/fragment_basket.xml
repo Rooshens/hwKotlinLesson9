@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="qr.a.rooshen.hwkotlinlesson9.qr.a.rooshen.hwkotlinlesson9.BasketFragment">
+    tools:context="qr.a.rooshen.hwkotlinlesson9.BasketFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clRoot"

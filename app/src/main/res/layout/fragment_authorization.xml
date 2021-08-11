@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="qr.a.rooshen.hwkotlinlesson9.qr.a.rooshen.hwkotlinlesson9.AuthorizationFragment">
+    tools:context="qr.a.rooshen.hwkotlinlesson9.AuthorizationFragment">
 
     <FrameLayout
 
@@ -89,6 +89,15 @@
                 android:breakStrategy="high_quality"
                 android:gravity="center_horizontal"
                 android:text="@string/TermsOfUseString" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swNotHide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Больше не показывать"
+                android:textSize="15sp" />
 
         </LinearLayout>
 

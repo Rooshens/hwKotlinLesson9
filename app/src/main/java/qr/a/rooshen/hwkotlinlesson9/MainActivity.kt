@@ -1,8 +1,9 @@
 package qr.a.rooshen.hwkotlinlesson9
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
-import qr.a.rooshen.hwkotlinlesson9.R
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity(), MainNavigation {
@@ -11,14 +12,37 @@ class MainActivity : AppCompatActivity(), MainNavigation {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        openAuthorizationFragment()
+        val notShowItAnymore = getSharedPreferences("settingsHWKotlinlesson9", Context.MODE_PRIVATE)
+       if (notShowItAnymore.getBoolean("notShowItAnymore", false)) {
+        //if(notShowItAnymore.contains("notShowItAnymore")){
+            openAuthorizationFragmentNotShowItAnymore()
+           Log.d("TAG","${notShowItAnymore.getBoolean("notShowItAnymore", false)}")
+        } else {
+            openGreeting()
+           Log.d("TAG","${notShowItAnymore.getBoolean("notShowItAnymore", false)}")
+        }
 
+    }
+
+    override fun openGreeting() {
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.clRootActivity, GreetingFragment())
+            .commit()
+    }
+
+    override fun openAuthorizationFragmentNotShowItAnymore() {
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.clRootActivity, AuthorizationFragment())
+            .commit()
     }
 
     override fun openMenu() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.clRootActivity, MenuFragment())
+            .addToBackStack("Menu")
             .commit()
     }
 
@@ -43,7 +67,8 @@ class MainActivity : AppCompatActivity(), MainNavigation {
     override fun openAuthorizationFragment() {
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.clRootActivity, AuthorizationFragment())
+            .replace(R.id.clRootActivity, AuthorizationFragment())
+            .addToBackStack("AuthorizationFragment")
             .commit()
     }
 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="qr.a.rooshen.hwkotlinlesson9.GreetingFragment">
+
+
+    <TextView
+        android:id="@+id/tvOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="online"
+        android:textColor="#262633"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSwiftBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SWIFTBOOK"
+        android:textColor="#262633"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvOnline"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
+
+    <ImageView
+        android:id="@+id/ivCircleIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="@id/tvOnline"
+        app:layout_constraintStart_toEndOf="@id/tvSwiftBook"
+        app:layout_constraintTop_toTopOf="@id/tvOnline" />
+
+    <ImageView
+        android:id="@+id/ivGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/img_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSwiftBook" />
+
+    <TextView
+        android:id="@+id/tvGreetingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/Greeting"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivGreeting" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cbBeginGreeting"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorbegin"
+        app:layout_constraintTop_toBottomOf="@id/tvGreetingText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/BeginButtonString" />
+
+    <TextView
+        android:id="@+id/tvBeginGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cbBeginGreeting"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:text="Больше не показывать"
+        android:textColor="@color/colorskip" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,8 @@
                                              <br>вермишелью на выбор</br></string>
     <string name="DialogPriceCounter">235 ₽</string>
     <string name="DialogQuantityCounter">+     1     -</string>
-   <string name="SWIFTBOOK">SWIFTBOOK</string>
+    <string name="SWIFTBOOK">SWIFTBOOK</string>
+    <string name="Greeting">Привет!<br>Сегодня мы приготовим самое</br>
+                                   <br>вкусное приложение</br></string>
 
 </resources>

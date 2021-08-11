@@ -5,4 +5,4 @@
     android:id="@+id/clRootActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="qr.a.rooshen.hwkotlinlesson9.qr.a.rooshen.hwkotlinlesson9.MainActivity"></FrameLayout>
+    tools:context="qr.a.rooshen.hwkotlinlesson9.MainActivity"></FrameLayout>

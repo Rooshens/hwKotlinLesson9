@@ -1,11 +1,12 @@
 package qr.a.rooshen.hwkotlinlesson9
 
 
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import qr.a.rooshen.hwkotlinlesson9.databinding.FragmentAuthorizationBinding
 
 class AuthorizationFragment : Fragment() {
@@ -23,9 +24,17 @@ class AuthorizationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.swNotHide.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                val notShowItAnymore = requireContext().getSharedPreferences(
+                    "settingsHWKotlinlesson9",
+                    Context.MODE_PRIVATE
+                )
+                notShowItAnymore.edit().remove("notShowItAnymore").apply()
+            }
+        }
+
         binding.buttonBegin.setOnClickListener {
-            //(activity as? MainNavigation)?.openBasketFragment(binding.etPersonName.text.toString())
-            //(activity as? MainNavigation)?.openMenuList()
             (activity as? MainNavigation)?.openMenu()
         }
     }
